@@ -1,14 +1,8 @@
 <?php
 
-echo "Bem-vindo ao Gerenciador de Animais da Fazenda!\n";
-echo "Escolha uma opção:\n";
-echo "1 - Cadastrar animal\n";
-echo "2 - Listar animais\n";
-echo "3 - Remover animal\n";
-echo "4 - Buscar animal\n";
-echo "5 - Sair\n";
+require __DIR__ . "/utils/manageSystem.php";
 
-echo "Escolha uma opção: ";
+showOptions();
 
 $option = fgets(STDIN);
 $animals = ['Biu', 'Garfield', 'Bidu'];
@@ -44,9 +38,9 @@ switch ($option) {
     $index = array_search($animalName, $animals);
 
     if ($index) {
-      fwrite(STDOUT, "O animal {$animalName} foi encontrado!");
+      fwrite(STDOUT, "O animal $animalName foi encontrado!");
     } else {
-      fwrite(STDOUT, "O animal {$animalName} não foi encontrado!");
+      fwrite(STDOUT, "O animal $animalName não foi encontrado!");
     }
     break;
   case 5:
