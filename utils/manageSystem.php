@@ -11,6 +11,10 @@ function showOptions(): void {
   echo "Escolha uma opção: ";
 }
 
+function showText(string $text) {
+  fwrite(STDOUT, $text);
+}
+
 function userTyping(): mixed {
   return trim(fgets(STDIN));
 }

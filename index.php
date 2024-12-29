@@ -1,17 +1,15 @@
 <?php
 
 require __DIR__ . "/utils/manageSystem.php";
+require __DIR__ . "/utils/manageAnimals.php";
 
 showOptions();
 
 $option = userTyping();
-$animals = ['Biu', 'Garfield', 'Bidu'];
 
 switch ($option) {
   case 1:
-    echo "Digite o nome do animal: ";
-    $animalName = userTyping();
-    $animals[] = $animalName;
+    addNewAnimal();
     break;
   case 2:
     foreach ($animals as $key => $animal) {
