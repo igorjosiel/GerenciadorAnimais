@@ -4,13 +4,13 @@ require __DIR__ . "/utils/manageSystem.php";
 
 showOptions();
 
-$option = fgets(STDIN);
+$option = userTyping();
 $animals = ['Biu', 'Garfield', 'Bidu'];
 
 switch ($option) {
   case 1:
     echo "Digite o nome do animal: ";
-    $animalName = trim(fgets(STDIN));
+    $animalName = userTyping();
     $animals[] = $animalName;
     break;
   case 2:
@@ -20,7 +20,7 @@ switch ($option) {
     break;
   case 3:
     echo "Digite o nome do animal: ";
-    $animalName = trim(fgets(STDIN));
+    $animalName = userTyping();
     $index = array_search($animalName, $animals);
 
     if ($index !== false) {
@@ -33,7 +33,7 @@ switch ($option) {
     break;
   case 4:
     echo "Digite o nome do animal: ";
-    $animalName = trim(fgets(STDIN));
+    $animalName = userTyping();
 
     $index = array_search($animalName, $animals);
 

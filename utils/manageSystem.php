@@ -10,3 +10,7 @@ function showOptions(): void {
   echo "5 - Sair\n";
   echo "Escolha uma opção: ";
 }
+
+function userTyping(): mixed {
+  return trim(fgets(STDIN));
+}
