@@ -14,7 +14,9 @@ function addNewAnimal() {
 }
 
 function showAnimals() {
-  foreach ($animals as $key => $animal) {
-    echo $key + 1 . " - $animal\n";
+  $animals = Animal::$animals;
+
+  foreach ($animals as $animal) {
+    showText("Animal: " . $animal->type . ", Raça: " . $animal->breed . ", Nome: " . $animal->name . "\n");
   }
 }
