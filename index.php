@@ -1,5 +1,6 @@
 <?php
 
+require __DIR__ . "/models/Animal.php";
 require __DIR__ . "/utils/manageSystem.php";
 require __DIR__ . "/utils/manageAnimals.php";
 
@@ -12,9 +13,7 @@ switch ($option) {
     addNewAnimal();
     break;
   case 2:
-    foreach ($animals as $key => $animal) {
-      echo $key + 1 . " - $animal\n";
-    }
+    showAnimals();
     break;
   case 3:
     echo "Digite o nome do animal: ";

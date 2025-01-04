@@ -1,10 +1,20 @@
 <?php
 
-$animals = ['Biu', 'Garfield', 'Bidu'];
-
 function addNewAnimal() {
-  showText("Digite o nome do animal: ");
+  showText('Digite o tipo do animal: ');
+  $animal = userTyping();
 
-  $animalName = userTyping();
-  $animals[] = $animalName;
+  showText('Digite a raça do animal: ');
+  $breed = userTyping();
+
+  showText("Digite o nome do animal: ");
+  $name = userTyping();
+
+  $animal = new Animal($animal, $breed, $name);
+}
+
+function showAnimals() {
+  foreach ($animals as $key => $animal) {
+    echo $key + 1 . " - $animal\n";
+  }
 }
